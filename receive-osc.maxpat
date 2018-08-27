@@ -38,13 +38,29 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "multislider",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 927.0, 263.0, 358.0, 244.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 188.0, 329.0, 1087.0, 479.0 ],
+					"setminmax" : [ 0.0, 50.0 ],
+					"style" : "velvet"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.0, 92.0, 147.0, 22.0 ],
+					"patching_rect" : [ 340.0, 92.0, 179.0, 22.0 ],
 					"style" : "",
-					"text" : "udpsend 10.0.8.172 8000"
+					"text" : "udpsend 169.254.125.114 8000"
 				}
 
 			}
@@ -802,7 +818,7 @@
 					"cursor_shape" : "bar",
 					"cursor_size" : 3,
 					"cursor_visible" : 1,
-					"domain_bounds" : [ 0.0, 96125.0 ],
+					"domain_bounds" : [ 0.0, 1.1 ],
 					"domainruler_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"domainruler_fgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"domainruler_grid" : 0,
@@ -854,15 +870,19 @@
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 33.0,
 					"id" : "obj-12",
-					"linecount" : 5,
+					"linecount" : 7,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 586.0, 162.0, 300.0, 76.0 ],
+					"patching_rect" : [ 586.0, 162.0, 818.0, 267.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 7,
+					"presentation_rect" : [ 361.0, 60.0, 809.0, 267.0 ],
 					"style" : "",
-					"text" : "66.548698 6.422266 1.741893 0.89314 0.311186 0.712845 0.463325 0.767097 0.447298 0.458883 1.31325 2.862218 1.198371 0.632204 0.264165 4.473041 0.970663 1.054388 0.92467 0.340614 88.201828 5.811011 1.966503 0.799857 0.289042"
+					"text" : "198.956863 264.376648 218.135818 158.574371 115.017258 303.518463 142.25264 168.631317 134.95 166.68454 248.957474 233.144501 184.432648 152.331207 123.254768 138.805252 336.260651 184.248795 96.322815 92.677299 344.205383 199.673233 127.09716 101.612724 134.596756"
 				}
 
 			}
@@ -939,6 +959,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-10", 0 ]
